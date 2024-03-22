@@ -1,0 +1,26 @@
+{
+  "name": "ttcnktpm",
+  "version": "1.0.0",
+  "description": "TastyPizzaHub.com",
+  "main": "index.js",
+  "scripts": {
+    "start": "src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ducnguyen6868/TTCNKTPM.git"
+  },
+  "keywords": [
+    "Pizza"
+  ],
+  "author": "@ducnguyen6868",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ducnguyen6868/TTCNKTPM/issues"
+  },
+  "homepage": "https://github.com/ducnguyen6868/TTCNKTPM#readme",
+  "dependencies": {
+    "express": "^4.19.1"
+  }
+}
