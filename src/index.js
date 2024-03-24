@@ -4,6 +4,8 @@ const path= require("path");
 const handlebars=require( "express-handlebars");
 const bodyParser = require('body-parser');
 const app =  express();
+const route=require("./routers")
+route(app);
 app.use(express.static(path.join(__dirname, 'public')))
 console.log(path.join(__dirname));
 app.use(express.urlencoded({
@@ -16,7 +18,5 @@ app.engine('hbs', handlebars.engine({
 }))
 app.set('view engine', 'hbs')
 app.set('views', path.join(__dirname, 'resources/views'))
-app.get("/",(req,res)=>{
-    res.render("homepage")
-    })
+
 app.listen(port,()=>{console.log(`Server is running on ${port}`)})

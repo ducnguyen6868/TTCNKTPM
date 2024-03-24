@@ -1,9 +1,38 @@
-h1 {
-  color: green; }
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&family=Poppins:wght@300&family=Rakkas&family=Vina+Sans&display=swap");
+.header {
+  padding: 10px 20px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between; }
+
+.header .header-left {
+  display: flex;
+  align-items: center; }
+
+.header .header-left img {
+  width: 100px;
+  height: auto; }
+
+.header .header-left span {
+  font-size: 2.5rem;
+  padding-top: 30px; }
+
+.header .header-right {
+  padding: 10px 20px; }
+
+.header-right ul li {
+  list-style-type: none;
+  display: inline-block;
+  font-size: larger;
+  height: 50px;
+  line-height: 50px; }
 
 * {
   padding: 0;
   margin: 0;
+  font-family: "Rakkas", serif;
+  font-weight: 400;
+  font-style: italic;
   box-sizing: border-box; }
 
 h1 {
