@@ -1,0 +1,80 @@
+.slider-container {
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .slides {
+        display: flex;
+        transition: transform 0.5s ease;
+        width: 400%;
+    }
+
+    .slide {
+        width: 25%;
+        flex-shrink: 0;
+    }
+
+    .slide img {
+        width: 100%;
+        /* Kích thước hình ảnh bên trong slide */
+        height: 300px;
+        /* Chiều cao cố định */
+        object-fit: cover;
+        /* Đảm bảo hình ảnh không bị biến dạng */
+        object-position: center;
+    }
+.order-option{
+    width:max-content;
+    height:max-content;
+    margin-top: -100px;
+    margin-left: 50%;
+    transform:translateX(-50%);
+    padding:20px;
+    border-radius: 1.5em;
+    background-color: azure;
+}
+.order-option>span{
+    font-size: 1.5em;
+    font-family: 'Times New Roman', Times, serif;
+    padding:10px 20px;
+    border:solid 1px pink;
+    font-style: normal;
+    cursor:pointer;
+    border-radius: .5em;
+}
+/* CSS mặc định */
+.option {
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* CSS khi được chọn */
+.option.selected {
+    padding:15px 25px;
+    
+}
+
+.order-option .order-location{
+    margin-top: 30px;
+}
+
+.order-location>input{
+    width:90%;
+    height:50px;
+    padding:10px;
+    outline:none;
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 0.5em;
+    border-color: bisque;
+}
+.order-location>input:focus{
+    border:solid 2px green;
+}
+.order-location>i{
+    font-size: 1.5em;
+    cursor:pointer;
+    color:rgb(24, 166, 50);
+}

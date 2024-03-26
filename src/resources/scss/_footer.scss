@@ -1,0 +1,69 @@
+footer{
+    padding:50px 100px;
+    background-color: rgb(188, 26, 26);
+}
+footer .footer-top{
+    text-align: right;
+    border-bottom: solid 1px black;
+    color:white;
+    font-size: larger;
+}
+footer .footer-top .fa-brands{
+    margin-left: 20px;
+}
+footer .footer-center{
+    display:flex;
+    justify-content: space-between;
+    padding:10px 20px;
+}
+.footer-center .footer-left>img{
+    width:80px;
+    height:auto;
+}
+.footer-center .footer-left>p{
+    color:white;
+}
+.footer-center .footer-middle{
+    max-width: 500px;
+}
+
+.footer-middle ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+  
+  .footer-middle li {
+    flex: 0 0 33.333%; /* Chia đều mỗi li để có 3 cột */
+    box-sizing: border-box;
+    padding: 10px; /* Khoảng cách giữa các mục */
+  }
+  
+  .footer-middle a {
+    text-decoration: none;
+    color: white; /* Màu chữ, thay đổi tùy ý */
+    display: block; /* Đảm bảo liên kết chiếm toàn bộ không gian của li */
+  }
+  .footer-middle a:hover{
+    text-decoration: underline;
+  }
+.footer-center .footer-right{
+    align-items: center;
+    justify-content: center;
+}
+.footer-center .footer-right>img{
+    width:250px;
+    height:auto;
+}
+footer .footer-bottom{
+    color:white;
+    text-align: center;
+}
+
+
+
+
+
+    
