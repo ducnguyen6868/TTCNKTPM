@@ -18,7 +18,10 @@
 
 .header .header-left span {
   font-size: 2.5rem;
-  padding-top: 30px; }
+  padding-top: 30px;
+  font-family: "Rakkas", serif;
+  font-weight: 400;
+  font-style: italic; }
 
 .header .header-right {
   padding: 10px 20px;
@@ -39,7 +42,10 @@
 
 footer {
   padding: 50px 100px;
-  background-color: #bc1a1a; }
+  background-color: #bc1a1a;
+  font-family: "Rakkas", serif;
+  font-weight: 400;
+  font-style: italic; }
 
 footer .footer-top {
   text-align: right;
@@ -149,10 +155,6 @@ footer .footer-bottom {
   cursor: pointer;
   margin-right: 10px; }
 
-/* CSS khi được chọn */
-.option.selected {
-  padding: 15px 25px; }
-
 .order-option .order-location {
   margin-top: 30px; }
 
@@ -174,12 +176,102 @@ footer .footer-bottom {
   cursor: pointer;
   color: #18a632; }
 
+.content {
+  text-align: center; }
+
+.content #menu .border-bottom {
+  border-bottom: solid 2px green; }
+
+.content #menu .list-menu {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0px 5px;
+  text-decoration: none;
+  cursor: pointer; }
+
+.content .list-menu .list-menu-button {
+  border: none;
+  font-size: larger;
+  background-color: transparent;
+  padding: 5px 30px;
+  cursor: pointer; }
+
+.content #menu .list-menu:first-child {
+  font-size: 2rem;
+  color: red;
+  border: none;
+  font-style: italic;
+  font-family: "Rakkas", serif; }
+
+.content .dropdown-menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 10px;
+  overflow: auto;
+  margin: 1em 10em; }
+
+.dropdown-menu .detail-menu {
+  border-radius: 1em;
+  box-shadow: 0 0 10px #858f85;
+  list-style-type: none;
+  position: relative;
+  padding: 0;
+  min-width: 200px;
+  flex-wrap: wrap; }
+
+.dropdown-menu .image-container {
+  overflow: hidden; }
+
+.dropdown-menu .image-container > img:hover {
+  transform: scale(1.2);
+  object-fit: cover;
+  object-position: center;
+  max-width: 100%;
+  transition: all  .4s ease; }
+
+.dropdown-menu .image-container > img {
+  width: 100%;
+  height: auto;
+  border-radius: 1em 1em 0 0;
+  cursor: pointer; }
+
+.dropdown-menu .decription {
+  padding: 1.2em;
+  text-align: left;
+  font-size: large;
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 1.5;
+  margin-bottom: 1em;
+  max-height: 300px;
+  overflow-y: scroll; }
+
+.decription .order {
+  color: white;
+  background-color: #03a503;
+  border: none;
+  font-size: larger;
+  padding: 5px 20px;
+  border-radius: .5em;
+  font-family: 'Times New Roman', Times, serif;
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  cursor: pointer; }
+
+.decription .order-button {
+  width: 100%;
+  bottom: 0;
+  right: 0; }
+
+.content .pizza {
+  grid-template-columns: repeat(4, minmax(200px, 1fr)); }
+
+.content .appetizer {
+  grid-template-columns: repeat(4, minmax(200px, 1fr)); }
+
 * {
   padding: 0;
   margin: 0;
-  font-family: "Rakkas", serif;
-  font-weight: 400;
-  font-style: italic;
   box-sizing: border-box; }
 
 h1 {

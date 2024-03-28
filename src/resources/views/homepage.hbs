@@ -6,8 +6,13 @@
         <div class="slide"><img src="./img/banner4.jpg" alt="Slide 4"></div>
     </div>
     <div class="order-option">
-        <span id="delivery-option" class="option">Giao hàng tận nơi</span>
-        <span id="pickup-option" class="option">Đặt đến lấy</span><br>
+        <span id="delivery-option" class="option">
+            <input type="radio" name="selected-option">
+            Giao hàng tận nơi
+        </span>
+        <span id="pickup-option" class="option">
+            <input type="radio" name="selected-option">
+            Đặt đến lấy</span><br>
         <div class="order-location">
             <input placeholder="Vui lòng nhập địa chỉ của bạn ...">
             <i class="fa-solid fa-map"></i>
@@ -15,12 +20,446 @@
     </div>
 </div>
 <div class="content">
-    <ul>
-        <li><a href="">Hôm nay ăn gì ?</a></li>
-        <li><a href="">COMBO</a></li>
-        <li><a href="">Pizza</a></li>
-        <li><a href="">Món khai vị</a></li>
-        <li><a href="">Thức uống</a></li>
+    <ul id="menu">
+        <li class="list-menu">Hôm nay ăn gì ?</li>
+        <li class="list-menu"><button id="combo-button" class="list-menu-button border-bottom">COMBO</button></li>
+        <li class="list-menu"><button id="pizza-button" class="list-menu-button">Pizza</button></li>
+        <li class="list-menu"><button id="appetizer-button" class="list-menu-button">Món khai vị</button></li>
+        <li class="list-menu"><button id="drink-button" class="list-menu-button">Thức uống</button></li>
     </ul>
+    <ul class="dropdown-menu" id="combo">
+        <li class="detail-menu">
+            <div class="image-container">
+                <img src="../img/combo1.jpg" alt="Combo 1">
+            </div>
+            <div class="decription">
+                <h1>COMBO 1</h1>
+                <p>
+                    Combo dành cho 2-3 người:
+                    01 Pizga Phô Mai/ Pizza ALC (Cỡ Vừa)
+                    01 Mì Ý Thịt Xông Khói Xốt Kem/ Cơm Chiên Hải Sản/ Xà Lách Cá Ngừ & Thịt Xông Khói
+                    01 Phần Cánh Gà 4 Miếng hoăc Gà Không Xương (Vị tùy chọn)
+                    Thức uống: 03 Lon Nước Ngọt/ Nước suối
+                </p>
+
+                <button class="order">Chọn</button>
+            </div>
+        </li>
+        <li class="detail-menu">
+            <div class="image-container">
+                <img src="../img/combo2.jpg" alt="Combo 2">
+            </div>
+            <div class="decription">
+                <h1>COMBO 2</h1>
+                <p>
+                    Combo dành cho 4-6 người:
+                    01 Pizga Phô Mai/ Pizza ALC (Cỡ Lớn)
+                    01 Mì Ý Thịt Xông Khói Xốt Kem/ Cơm Chiên Hải Sản/ Xà Lách Cá Ngừ & Thịt Xông Khói
+                    01 Phần Cánh Gà 6 Miếng hoăc Gà Không Xương (Vị tùy chọn)
+                    Thức uống: 06 Lon Nước Ngọt/ Nước suối
+                </p>
+
+                <button class="order">Chọn</button>
+            </div>
+        </li>
+        <li class="detail-menu">
+            <div class="image-container">
+                <img src="../img/combo3.jpg" alt="Combo 3">
+            </div>
+            <div class="decription">
+                <h1>COMBO 3</h1>
+                <p>
+                    Dành 3-4 người:
+                    01 Pizza ALC (Cỡ Lớn),
+                    01 Mì Ý Thịt Xông Khói Xốt Kem/ Cơm Chiên Hải Sản/ Xà Lách Cá Ngừ & Thịt Xông Khói,
+                    01 Khoai Tây Chiên/ Bánh Cuộn Phô Mai/ Xúp Kem Nấm Thịt Gà, 04 Lon Nước Ngọt / 04 Aquafina.
+                    Mở rộng thêm các sự lựa chọn món ăn kèm khác, chỉ với 10,000 VND hoặc 30,000 VND.
+                </p>
+
+                <button class="order">Chọn</button>
+            </div>
+        </li>
+        <li class="detail-menu">
+            <div class="image-container">
+                <img src="../img/combo4.jpg" alt="Combo 4">
+            </div>
+            <div class="decription">
+                <h1>COMBO 4</h1>
+                <p>
+                    Dành cho 5-6 người:
+                    01 Pizza ALC (Cỡ Lớn),
+                    01 Pizza ALC (Cỡ Vừa),
+                    01 Mì Ý Thịt Xông Khói Xốt Kem/ Cơm Chiên Hải Sản,
+                    01 Xà Lách Cá Ngừ & Thịt Xông Khói/ Xà Lách Gà Pesto,
+                    06 Lon Nước Ngọt / 06 Aquafina.
+                    Mở rộng thêm các sự lựa chọn món ăn kèm khác, chỉ với 10,000 VND hoặc 30,000 VND
+                </p>
+
+                <button class="order">Chọn</button>
+            </div>
+        </li>
+    </ul>
+    <ul class="dropdown-menu pizza" id="pizza" style="display:none">
+        <li class="detail-menu">
+            <div class="image-container">
+                <img src="../img/Pizga_Pho_Mai_400x275.jpg" alt="Combo 1">
+            </div>
+            <div class="decription">
+                <h1>Pizga Phô mai</h1>
+                <p class="decription-detail">
+                    Thưởng thức vị gà Karaage chiên giòn cắt lát trên nền pizza đậm vị,
+                    cùng nấm tươi, hành tây hoà quyện xốt phô mai.
+                </p>
+                <label for="size">Chọn cỡ:</label>
+                <select name="size">
+                    <option value="Small">Nhỏ</option>
+                    <option value="Medium">Vừa</option>
+                    <option value="Big">Nhỏ</option>
+                </select><br>
+                <label for="border-base">Chọn đế viền:</label>
+                <select id="border-base" name="border-base">
+                    <option value="Version1">Đế tay kéo truyền thống(Vừa)</option>
+                    <option value="Version2">Đế giòn xốp(Vừa)</option>
+                    <option value="Version3">Viền phô mai(Vừa)</option>
+                    <option value="Version4">Viền xúc xích(Vừa)</option>
+                    <option value="Version5">Viền phô mai xúc xích(Vừa)</option>
+                </select>
+
+                <button class="order order-button">Chọn - 179.000đ</button>
+            </div>
+        </li>
+        <li class="detail-menu">
+            <div class="image-container">
+                <img src="../img/Pizza_Gap_Doi_Nhan_Phu_Con_Loc_Hai_San_400x275.jpg"
+                    alt="Pizza Nhân phủ gấp đôi cơn lốc hải sản">
+            </div>
+            <div class="decription">
+                <h1>Pizza Nhân phủ gấp đôi cơn lốc hải sản</h1>
+                <p class="decription-detail">
+                    Pizza Cơn Lốc Hải Sản Với Hải Sản
+                    (MựC, Thanh Cua) Nhân Đôi Cùng Với Thơm,
+                    Ớt Chuông Xanh, HàNh Tây, Phủ Phô Mai Mozzarella
+                    Từ New Zealand Trên Nền XốT Cheesy Mayo.
+                </p>
+                <label for="size">Chọn cỡ:</label>
+                <select name="size">
+                    <option value="Small">Nhỏ</option>
+                    <option value="Medium">Vừa</option>
+                    <option value="Big">Nhỏ</option>
+                </select><br>
+                <label for="border-base">Chọn đế viền:</label>
+                <select id="border-base" name="border-base">
+                    <option value="Version1">Đế tay kéo truyền thống(Vừa)</option>
+                    <option value="Version2">Đế giòn xốp(Vừa)</option>
+                    <option value="Version3">Viền phô mai(Vừa)</option>
+                    <option value="Version4">Viền xúc xích(Vừa)</option>
+                    <option value="Version5">Viền phô mai xúc xích(Vừa)</option>
+                </select>
+
+                <button class="order order-button">Chọn - 269.000đ</button>
+            </div>
+        </li>
+        <li class="detail-menu">
+            <div class="image-container">
+                <img src="../img/Pizza_Hai_San_Nhiet_Doi_400x275.jpg" alt="Pizza hải sản nhiệt đới">
+            </div>
+            <div class="decription">
+                <h1>Pizza hải sản nhiệt đới</h1>
+                <p class="decription-detail">
+                    Khi biển cả cũng được thu gọn trong một chiếc pizza với đầy ắp tôm,
+                    thanh cua, xen lẫn cà chua, bắp, thơm, thì là trên nền phô mai đậm vị.
+                </p>
+                <label for="size">Chọn cỡ:</label>
+                <select name="size">
+                    <option value="Small">Nhỏ</option>
+                    <option value="Medium">Vừa</option>
+                    <option value="Big">Nhỏ</option>
+                </select><br>
+                <label for="border-base">Chọn đế viền:</label>
+                <select id="border-base" name="border-base">
+                    <option value="Version1">Đế tay kéo truyền thống(Vừa)</option>
+                    <option value="Version2">Đế giòn xốp(Vừa)</option>
+                    <option value="Version3">Viền phô mai(Vừa)</option>
+                    <option value="Version4">Viền xúc xích(Vừa)</option>
+                    <option value="Version5">Viền phô mai xúc xích(Vừa)</option>
+                </select>
+
+                <button class="order order-button">Chọn - 199.000đ</button>
+            </div>
+        </li>
+        <li class="detail-menu">
+            <div class="image-container">
+                <img src="../img/Pizza_Hawaiian_400x275.jpg" alt="Pizza Hawaiian">
+            </div>
+            <div class="decription">
+                <h1>Pizza Hawaiian</h1>
+                <p class="decription-detail">
+                    Phủ Giăm Bông Và Thơm Ngọt Dịu Trên Nền Sốt Cà Chua Truyền Thống.
+                </p>
+                <label for="size">Chọn cỡ:</label>
+                <select name="size">
+                    <option value="Small">Nhỏ</option>
+                    <option value="Medium">Vừa</option>
+                    <option value="Big">Nhỏ</option>
+                </select><br>
+                <label for="border-base">Chọn đế viền:</label>
+                <select id="border-base" name="border-base">
+                    <option value="Version1">Đế tay kéo truyền thống(Vừa)</option>
+                    <option value="Version2">Đế giòn xốp(Vừa)</option>
+                    <option value="Version3">Viền phô mai(Vừa)</option>
+                    <option value="Version4">Viền xúc xích(Vừa)</option>
+                    <option value="Version5">Viền phô mai xúc xích(Vừa)</option>
+                </select>
+
+                <button class="order order-button">Chọn - 179.000đ</button>
+            </div>
+        </li>
+        <li class="detail-menu">
+            <div class="image-container">
+                <img src="../img/Pizza_Thap_Cam_400x275.jpg" alt="Pizza Thập cẩm">
+            </div>
+            <div class="decription">
+                <h1>Pizza Thập cẩm</h1>
+                <p class="decription-detail">
+                    Thịt bò, thịt xông khói, pepperoni,
+                    thơm, ớt chuông, nấm, hành tây trên nền xốt cà chua,
+                    phô mai mozzarella.
+                </p>
+                <label for="size">Chọn cỡ:</label>
+                <select name="size">
+                    <option value="Small">Nhỏ</option>
+                    <option value="Medium">Vừa</option>
+                    <option value="Big">Nhỏ</option>
+                </select><br>
+                <label for="border-base">Chọn đế viền:</label>
+                <select id="border-base" name="border-base">
+                    <option value="Version1">Đế tay kéo truyền thống(Vừa)</option>
+                    <option value="Version2">Đế giòn xốp(Vừa)</option>
+                    <option value="Version3">Viền phô mai(Vừa)</option>
+                    <option value="Version4">Viền xúc xích(Vừa)</option>
+                    <option value="Version5">Viền phô mai xúc xích(Vừa)</option>
+                </select>
+
+                <button class="order order-button">Chọn - 219.000đ</button>
+            </div>
+        </li>
+        <li class="detail-menu">
+            <div class="image-container">
+                <img src="../img/Pizza_Xuc_Xich_Nuong_400x275.jpg" alt="Pizza Xúc xích nướng">
+            </div>
+            <div class="decription">
+                <h1>Pizza Xúc xích nướng</h1>
+                <p class="decription-detail">
+                    Thơm Ngon Và Giàu Protein Với Thịt Xông Khói,
+                    Xúc Xích, ThịT Bò, Giăm Bông Và Pepperoni.
+                </p>
+                <label for="size">Chọn cỡ:</label>
+                <select name="size">
+                    <option value="Small">Nhỏ</option>
+                    <option value="Medium">Vừa</option>
+                    <option value="Big">Nhỏ</option>
+                </select><br>
+                <label for="border-base">Chọn đế viền:</label>
+                <select id="border-base" name="border-base">
+                    <option value="Version1">Đế tay kéo truyền thống(Vừa)</option>
+                    <option value="Version2">Đế giòn xốp(Vừa)</option>
+                    <option value="Version3">Viền phô mai(Vừa)</option>
+                    <option value="Version4">Viền xúc xích(Vừa)</option>
+                    <option value="Version5">Viền phô mai xúc xích(Vừa)</option>
+                </select>
+
+                <button class="order order-button">Chọn - 179.000đ</button>
+            </div>
+        </li>
+        <li class="detail-menu">
+            <div class="image-container">
+                <img src="../img/Pizza_Ca_Ngu_400x275.jpg" alt="Pizza Cá Ngừ">
+            </div>
+            <div class="decription">
+                <h1>Pizga Cá ngừ</h1>
+                <p class="decription-detail">
+                    Mang Hương Vị Biển Cả Nhẹ Nhàng Với Cá Ngừ,
+                    Thanh Cua, HàNh Tây, Thơm Trên Nền Xốt Pesto.
+                </p>
+                <label for="size">Chọn cỡ:</label>
+                <select name="size">
+                    <option value="Small">Nhỏ</option>
+                    <option value="Medium">Vừa</option>
+                    <option value="Big">Nhỏ</option>
+                </select><br>
+                <label for="border-base">Chọn đế viền:</label>
+                <select id="border-base" name="border-base">
+                    <option value="Version1">Đế tay kéo truyền thống(Vừa)</option>
+                    <option value="Version2">Đế giòn xốp(Vừa)</option>
+                    <option value="Version3">Viền phô mai(Vừa)</option>
+                    <option value="Version4">Viền xúc xích(Vừa)</option>
+                    <option value="Version5">Viền phô mai xúc xích(Vừa)</option>
+                </select>
+
+                <button class="order order-button">Chọn - 219.000đ</button>
+            </div>
+        </li>
+        <li class="detail-menu">
+            <div class="image-container">
+                <img src="../img/Pizza_Con_Loc_Hai_San_400x275.jpg" alt="Pizza Cơn lốc hải sản">
+            </div>
+            <div class="decription">
+                <h1>Pizza Cơn lốc hải sản</h1>
+                <p class="decription-detail">
+                    Mực, Thanh Cua, Thơm, Ớt Chuông Xanh,
+                    HàNh Tây Và Phô Mai Mozzarella Trên Nền Xốt Cheesy Mayo
+                    Và Phô Mai Mozzarella Thượng Hạng.
+                </p>
+                <label for="size">Chọn cỡ:</label>
+                <select name="size">
+                    <option value="Small">Nhỏ</option>
+                    <option value="Medium">Vừa</option>
+                    <option value="Big">Nhỏ</option>
+                </select><br>
+                <label for="border-base">Chọn đế viền:</label>
+                <select id="border-base" name="border-base">
+                    <option value="Version1">Đế tay kéo truyền thống(Vừa)</option>
+                    <option value="Version2">Đế giòn xốp(Vừa)</option>
+                    <option value="Version3">Viền phô mai(Vừa)</option>
+                    <option value="Version4">Viền xúc xích(Vừa)</option>
+                    <option value="Version5">Viền phô mai xúc xích(Vừa)</option>
+                </select>
+
+                <button class="order order-button">Chọn - 239.000đ</button>
+            </div>
+        </li>
+
+    </ul>
+    <ul class="dropdown-menu appetizer" id="appetizer" style="display:none">
+        <li class="detail-menu">
+            <div class="image-container">
+                <img src="../img/Xa_Lach_Ga_Pesto_400x275.jpg" alt="Xà lách gà Pesto">
+            </div>
+            <div class="decription">
+                <h1>Xà lách gà Pesto</h1>
+                <p>
+                    Salad Tươi Xanh Với Thịt Gà Nướng Và Xốt Pesto Kiểu Ý.
+                </p>
+
+                <button class="order order-button">Chọn - 79.000 đ</button>
+            </div>
+        </li>
+        <li class="detail-menu">
+            <div class="image-container">
+                <img src="../img/Xa_Lach_Ca_Ngu_400x275.jpg" alt="Xà lách trộn cá ngừ và thịt xông khói">
+            </div>
+            <div class="decription">
+                <h1>Xà lách trộn cá ngừ và thịt xông khói</h1>
+                <p>
+                    Rau Xanh Trộn Với Cá Ngừ, Thịt Xông Khói,
+                    Đậu Pháp, Cà Chua Bi, Bắp Và Xốt Mayonnaise.
+                </p>
+
+                <button class="order order-button">Chọn - 79.000 đ</button>
+            </div>
+        </li>
+        <li class="detail-menu">
+            <div class="image-container">
+                <img src="../img/Pho_Mai_Chien_Gion_800X550.jpg" alt="Phô mai chiên giòn">
+            </div>
+            <div class="decription">
+                <h1>Phô mai chiên giòn</h1>
+                <p>
+                    Phô mai chiên giòn
+                </p>
+
+                <button class="order order-button">Chọn - 79.000 đ</button>
+            </div>
+        </li>
+        <li class="detail-menu">
+            <div class="image-container">
+                <img src="../img/Khoai_Tay_Chien_Dut_Lo_400x275.jpg" alt="Khoai tây chiên đút lò">
+            </div>
+            <div class="decription">
+                <h1>Khoai tây chiên đút lò</h1>
+                <p>
+                    Khoai tây chiên đút lò với phô mai, 
+                    thịt xông khói và xốt mù tạt mật ong. 
+                </p>
+
+                <button class="order order-button">Chọn - 79.000 đ</button>
+            </div>
+        </li>
+        <li class="detail-menu">
+            <div class="image-container">
+                <img src="../img/Com_Chien_Tom_Vi_Cay_400x275.jpg" alt="Cơm chiên tôm vị cay">
+            </div>
+            <div class="decription">
+                <h1>Cơm chiên tôm vị cay</h1>
+                <p>
+                   Thêm ngon với tôm, thêm no với cơm, và thêm tươi với cà rốt, 
+                   bắp và đậu trên nền xốt pesto quen thuộc.
+                </p>
+
+                <button class="order order-button">Chọn - 79.000 đ</button>
+            </div>
+        </li>
+        <li class="detail-menu">
+            <div class="image-container">
+                <img src="../img/Bap_Nuong_Pho_Mai_Thit_Xong_Khoi.jpg" alt="Bắp nướng phô mai thịt xông khói">
+            </div>
+            <div class="decription">
+                <h1>Bắp nướng phô mai thịt xông khói</h1>
+                <p>
+                   Bắp Ngọt, Thịt Xông Khói Kèm Xốt Cheesy Mayo Và Bơ Tỏi, 
+                   Phủ Phô Mai Mozzarella Đút Lò.
+                </p>
+                <button class="order order-button">Chọn - 79.000 đ</button>
+            </div>
+        </li>
+        <li class="detail-menu">
+            <div class="image-container">
+                <img src="../img/Banh_Cuon_Pho_Mai_800X550.jpg" alt="Bánh cuộn phô mai">
+            </div>
+            <div class="decription">
+                <h1>Bánh cuộn phô mai</h1>
+                <p>
+                   Được Làm Từ 2 Loại Phô Mai.
+                </p>
+                <button class="order order-button">Chọn - 79.000 đ</button>
+            </div>
+        </li>
+        <li class="detail-menu">
+            <div class="image-container">
+                <img src="../img/Xup_Hai_San_400x275_20220729.jpg" alt="Xúp hải sản">
+            </div>
+            <div class="decription">
+                <h1>Xúp hải sản</h1>
+                <p>
+                  
+                </p>
+                <button class="order order-button">Chọn - 79.000 đ</button>
+            </div>
+        </li>
+        <li class="detail-menu">
+            <div class="image-container">
+                <img src="../img/Khoai_Tay_Chien_400x275.jpg" alt="Khoai tây chiên">
+            </div>
+            <div class="decription">
+                <h1>Khoai tây chiên</h1>
+                <p>
+                  Khoai Tây Chiên Với Xốt Cà Chua.
+                </p>
+                <button class="order order-button">Chọn - 79.000 đ</button>
+            </div>
+        </li>
+        <li class="detail-menu">
+            <div class="image-container">
+                <img src="../img/Xup_Kem_Nam_Thit_Ga_400x275.jpg" alt="Xúp kem nấm thịt gà">
+            </div>
+            <div class="decription">
+                <h1>Xúp kem nấm thịt gà</h1>
+                <p>
+                  
+                </p>
+                <button class="order order-button">Chọn - 29.000 đ</button>
+            </div>
+        </li>
+
 </div>
 <script src="../js/hompage.js"></script>
